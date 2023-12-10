@@ -45,8 +45,7 @@
         var probihajiciVypocet=false;//proměnná pro uložení info, jestli bylo aktuálně stisknuto nějaké tlačítko s operací...
         var equation='';
         function spocitat(){
-            return eval(equation);
-
+           return eval(equation);
         }
         $(document).ready(function(){
             var numberInput=$('#cislo');
@@ -56,8 +55,8 @@
                 var aktualniCislo=$(this).text();
                 var numberInputVal=numberInput.val();
                 if (probihajiciVypocet){
-                    //spocitat();
                     numberInputVal=0;
+                    probihajiciVypocet=false;
                 }
                 if (numberInputVal==0 && aktualniCislo>0){
                     numberInputVal=aktualniCislo;
